@@ -1,4 +1,9 @@
-/* argparse-cpp is a tool for parsing command line arguments. 
+
+============
+argparse-cpp
+============
+
+   argparse-cpp is a tool for parsing command line arguments. 
    It generally follows the style of Python argparse.
 
    Features: 
@@ -13,8 +18,8 @@
 
    
 
-   Author: Shanqing Cai
+   Author: Shanqing Cai (shanqing.cai@gmail.com)
    Date: Feb. 2014
 
-*/
+
 
