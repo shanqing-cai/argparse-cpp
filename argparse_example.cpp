@@ -56,7 +56,7 @@ int main(int argc, char ** argv) {
   ap["class"].setAcceptSet("frigate,destroyer,cruiser,battlecruiser,"
 			   "battleship,carrier,transporter,recon");
 
-  /* Create 2nd positoinal argument */
+  /* Create 2nd positional argument */
   ap.add_argument("shipName", "shipName", 
 		  "Name of the ship (e.g., Enterprise)", 
 		  Argument::VAL_TYPE_STRING);
@@ -96,7 +96,7 @@ int main(int argc, char ** argv) {
   ap["quantity"].setAcceptSet(">0");
   
 
-  /* Add 4rd optional argument: alliance and coroporation assignment
+  /* Add 4rd optional argument: alliance and corporation assignment:
      Demonstrates multiple arg values */
   ap.add_argument("alliCorp", "--alliance-corp", 
 		  "Assign to alliance and corporation", 
@@ -124,8 +124,6 @@ int main(int argc, char ** argv) {
     vector<string> alliCorp = ap["alliCorp"].getStringVals();
       cout << "\tAssigne to\n\t\talliance: " << alliCorp[0] << endl;
       cout << "\t\tcorporation: " << alliCorp[1] << endl;
-    
-
   }
 
   return 0;
