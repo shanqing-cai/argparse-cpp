@@ -1275,10 +1275,10 @@ string ArgumentParser :: getHelpString(const int cw, const int lw) const {
   if (nPosArgs > 0) {
     oss << "Positional arguments: \n";
 
-    for (AMapItC amit = mArgs.begin(); amit != mArgs.end(); ++amit)
-      if ( (*amit).second.isPositional() )
-	oss << (*amit).second.getHelpString(cw, lw, (*amit).first) << "\n";
-    
+    for (deque<string>::const_iterator pait = pArgs.begin(); 
+    	 pait != pArgs.end(); ++pait)
+      oss << mArgs.at(*pait).getHelpString(cw, lw, *pait) << "\n";
+   
     oss << "\n";
   }
 
@@ -1300,4 +1300,3 @@ string ArgumentParser :: getHelpString(const int cw, const int lw) const {
 void ArgumentParser :: print_help() const {
   cout << getHelpString(80, 24) << "\n";
 }
-
