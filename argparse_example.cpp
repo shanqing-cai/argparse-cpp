@@ -1,8 +1,3 @@
-#include <iostream>
-#include <vector>
-
-#include "argparse.h"
-
 /* Commands for testing:
 
 Show help:
@@ -39,6 +34,11 @@ To demostrate errors:
    (float value outside acceptance set)
 
 */
+
+#include <iostream>
+#include <vector>
+
+#include "argparse.h"
 
 using namespace std;
 
